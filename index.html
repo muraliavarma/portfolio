@@ -9,11 +9,20 @@
 </head>
 <body ng-controller="ProjectCtrl">
 
-	<ul>
-		<li style="list-style-type: none" ng-repeat="project in projects">
-			{{project.name}}
-		</li>
-	</ul>
+	<table rules=cols border=1 frame=vsides>
+		<tr>
+			<td ng-repeat="category in categories" valign="top" style="width:140px">
+				<b>{{category.language}}</b>
+				<table>
+					<tr ng-repeat="project in category.projects">
+						<td>
+							{{project.name}}
+						</td>
+					</tr>
+				</table>
+			</td>
+		</tr>
+	</div>
  
 </body>
 </html>
