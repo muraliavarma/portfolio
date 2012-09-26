@@ -41,20 +41,24 @@ a {
   box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.2);
 }
 
-.category-false {
+.category-selected-false {
    color: #505050;
    background: #cfcfcf; 
 }
-.category-false:hover {
+.category-selected-false:hover {
   background-color: #dfdfdf;
 }
 
-.category-true {
+.category-selected-true {
    color: #cfcfcf;
    background: #303030; 
 }
-.category-true:hover {
+.category-selected-true:hover {
    background: #505050; 
+}
+
+.category-featured-true {
+    border: 2px solid #454545;
 }
 
 

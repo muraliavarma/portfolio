@@ -1,6 +1,8 @@
 function ProjectCtrl($scope, $http) {
 	$http.get('data/categories.json').success(function(data) {
 		$scope.categories = data;
+		//default load
+		$scope.setDetails($scope.categories[0].projects[0]);
 	});
 
 
@@ -21,6 +23,6 @@ function ProjectCtrl($scope, $http) {
 				$scope.categories[i].projects[j].selected = ($scope.categories[i].projects[j].id == projectId);
 			}
 		}
-	}
+	};
 
 }

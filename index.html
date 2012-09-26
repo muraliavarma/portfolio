@@ -15,7 +15,7 @@
 				<b>{{category.language}}</b>
 				<ul class="category-list">
 					<li ng-repeat="project in category.projects">
-						<a href="#/project/{{project.id}}" class="button category-{{!!project.selected}}" ng-click="setDetails(project)">{{project.name}}</a>
+						<a href="#/project/{{project.id}}" class="button category-selected-{{!!project.selected}} category-featured-{{!!project.featured}}" ng-click="setDetails(project)">{{project.name}}</a>
 					</li>
 				</ul>
 			</td>
@@ -23,7 +23,7 @@
 	</table>
 	<br/><br/>
 	<div id="details">
-		<a href="{{details.link}}" target="_blank" class="button demo" ng-show="details.link">Live Demo</a>
+		<a href="{{details.link}}" target="_blank" class="button demo" ng-show="details.link.url">{{details.link.text}}</a>
 		<h3>{{details.title}}</h3>
 		<br/>
 		{{details.overview}}
