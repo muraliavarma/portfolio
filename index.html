@@ -9,20 +9,37 @@
 </head>
 <body ng-controller="ProjectCtrl">
 
-	<table rules=cols border=1 frame=vsides>
+	<table rules=cols border=1 frame=vsides style="width: 100%">
 		<tr>
-			<td ng-repeat="category in categories" valign="top" style="width:140px">
+			<td ng-repeat="category in categories" valign="top" style="text-align: center">
 				<b>{{category.language}}</b>
-				<table>
-					<tr ng-repeat="project in category.projects">
-						<td>
-							{{project.name}}
-						</td>
-					</tr>
-				</table>
+				<ul class="category-list">
+					<li ng-repeat="project in category.projects">
+						<a href="#/project/{{project.id}}" class="button category-{{!!project.selected}}" ng-click="setDetails(project)">{{project.name}}</a>
+					</li>
+				</ul>
 			</td>
 		</tr>
+	</table>
+	<br/><br/>
+	<div id="details">
+		<a href="{{details.link}}" target="_blank" class="button demo" ng-show="details.link">Live Demo</a>
+		<h3>{{details.title}}</h3>
+		<br/>
+		{{details.overview}}
+		<br/>
+		<br/>
+		<ul class="img-list" ng-show="details.images">
+			<li ng-repeat="img in details.images">
+				<div style="width: {{img.width}}">
+					<img ng-src="{{img.url}}" style="width:{{img.width}}; height:{{img.height}}">
+					<br/>
+					{{img.caption}}
+				</div>
+			</li>
+		</ul>
+		<iframe ng-show="details.video" width="{{details.video.width}}" height="{{details.video.height}}" src="{{details.video.url}}" frameborder="0" allowfullscreen></iframe>
 	</div>
- 
+
 </body>
 </html>
