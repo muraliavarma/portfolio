@@ -1,4 +1,7 @@
 function ProjectCtrl($scope, $http) {
+
+	angular.module('myPortfolio', []);
+
 	$http.get('data/categories.json').success(function(data) {
 		$scope.categories = data;
 		//default load
@@ -10,7 +13,6 @@ function ProjectCtrl($scope, $http) {
 		$scope.setSelected(project.id);
 		$http.get('data/' + project.id + '.json').success(function(data) {
 			$scope.details = data;
-			$scope.details.title = project.name;
 			$scope.details.featured = project.featured;
 		}).error(function(data, status, headers, config) {
 			$scope.details = {};

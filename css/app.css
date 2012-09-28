@@ -42,25 +42,20 @@ a {
 }
 
 .category-selected-false {
-   color: #505050;
-   background: #cfcfcf; 
+  color: #505050;
+  background: #cfcfcf; 
 }
 .category-selected-false:hover {
   background-color: #dfdfdf;
 }
 
 .category-selected-true {
-   color: #cfcfcf;
-   background: #303030; 
+  color: #cfcfcf;
+  background: #303030; 
 }
 .category-selected-true:hover {
-   background: #505050; 
+  background: #505050; 
 }
-
-.category-featured-true {
-    border: 2px solid #454545;
-}
-
 
 .demo {
   width: 100px;
@@ -98,4 +93,14 @@ body {
   width: 900px;
   font-size: 13px;
   font-family: Arial;
+}
+
+.featured {
+  position: absolute;
+  top: 0;
+  right: -3px;
+  width: 0;
+  height: 0;
+  border-top: 10px solid red; 
+  border-left: 10px solid transparent;
 }

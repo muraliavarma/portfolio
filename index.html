@@ -14,8 +14,12 @@
 			<td ng-repeat="category in categories" valign="top" style="text-align: center">
 				<b>{{category.language}}</b>
 				<ul class="category-list">
-					<li ng-repeat="project in category.projects">
-						<a href="#/project/{{project.id}}" class="button category-selected-{{!!project.selected}} category-featured-{{!!project.featured}}" ng-click="setDetails(project)">{{project.name}}</a>
+					<li ng-repeat="project in category.projects" style="position: relative">
+						<a href="#/project/{{project.id}}" class="button category-selected-{{!!project.selected}}" ng-click="setDetails(project)">
+							{{project.name}}
+							<!-- <img src="resources/images/featured.png" ng-show="project.featured" style="position: absolute; top: 0; right: 0"/> -->
+							<span ng-show="project.featured" class="featured"/>
+						</a>
 					</li>
 				</ul>
 			</td>
@@ -24,7 +28,8 @@
 	<br/><br/>
 	<div id="details">
 		<a href="{{details.link}}" target="_blank" class="button demo" ng-show="details.link.url">{{details.link.text}}</a>
-		<h3>{{details.title}}</h3>
+		<h3 style="display: inline-block">{{details.title}}</h3>
+		<img ng-src="resources/images/featured.gif" ng-show="details.featured"/>
 		<br/>
 		{{details.overview}}
 		<br/>
@@ -40,6 +45,7 @@
 		</ul>
 		<iframe ng-show="details.video" width="{{details.video.width}}" height="{{details.video.height}}" src="{{details.video.url}}" frameborder="0" allowfullscreen></iframe>
 	</div>
-
+	<br/>
+	<br/>
 </body>
 </html>
