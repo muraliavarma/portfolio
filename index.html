@@ -17,7 +17,6 @@
 					<li ng-repeat="project in category.projects" style="position: relative">
 						<a href="#/project/{{project.id}}" class="button category-selected-{{!!project.selected}}" ng-click="setDetails(project)">
 							{{project.name}}
-							<!-- <img src="resources/images/featured.png" ng-show="project.featured" style="position: absolute; top: 0; right: 0"/> -->
 							<span ng-show="project.featured" class="featured"/>
 						</a>
 					</li>
