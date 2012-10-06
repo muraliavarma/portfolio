@@ -26,7 +26,7 @@
 	</table>
 	<br/><br/>
 	<div id="details">
-		<a href="{{details.link}}" target="_blank" class="button demo" ng-show="details.link.url">{{details.link.text}}</a>
+		<a href="{{details.link.url}}" target="_blank" class="button demo" ng-show="details.link">{{details.link.text}}</a>
 		<h3 style="display: inline-block">{{details.title}}</h3>
 		<img ng-src="resources/images/featured.gif" ng-show="details.featured"/>
 		<br/>
@@ -39,6 +39,7 @@
 					<img ng-src="{{img.url}}" style="width:{{img.width}}; height:{{img.height}}">
 					<br/>
 					{{img.caption}}
+					<br/><br/>
 				</div>
 			</li>
 		</ul>
