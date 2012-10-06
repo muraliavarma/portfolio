@@ -68,6 +68,16 @@ a {
   background-color: #a4343f;
 }
 
+.download {
+  width: 100px;
+  color: #555555;
+  background: #cfcfcf; 
+}
+
+.download:hover {
+  background-color: #dfdfdf;
+}
+
 ul.img-list {
   list-style: none;
   margin: 0;
@@ -77,6 +87,7 @@ ul.img-list {
 ul.img-list li {
   display: inline-block;
   padding-right: 20px;
+  vertical-align: top;
 }
 
 ul.category-list {
@@ -86,6 +97,17 @@ ul.category-list {
 
 ul.category-list li{
   padding-bottom: 5px;
+}
+
+ul.download-list {
+  list-style: none;
+  margin: 0;
+  padding-left: 0px;
+}
+
+ul.download-list li {
+  display: inline-block;
+  padding-right: 20px;
 }
 
 body {

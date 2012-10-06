@@ -43,6 +43,15 @@
 			</li>
 		</ul>
 		<iframe ng-show="details.video" width="{{details.video.width}}" height="{{details.video.height}}" src="{{details.video.url}}" frameborder="0" allowfullscreen></iframe>
+		<hr/>
+		<div id="downloads" ng-show="details.downloads">
+			<h4>Downloads</h3>
+			<ul class="download-list" ng-show="details.downloads">
+				<li ng-repeat="download in details.downloads">
+					<a href="{{download.url}}" target="_blank" class="button download" ng-show="download.url">{{download.text}}</a>
+				</li>
+			</ul>
+		</div>
 	</div>
 	<br/>
 	<br/>

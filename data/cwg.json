@@ -1,0 +1,20 @@
+{
+	"title": "Commonwealth Games Capacity Planner",
+	"overview": "This was one of my favorite Flex projects in Cisco. A huge network of routers had to be built for live TV feed transmission from different stadiums during the Games. The tool that I developed helped identify suitable positions for backup links, bandwidth utilization of every link and points of failure in the network. It also helped track primary and backup paths of individual TV feeds and provided a simple interface to monitor large amounts of live information in a browser window.",
+	"images": [{
+		"url": "resources/images/cwg1.png",
+		"width": "250px",
+		"height": "100%",
+		"caption": ""
+	},{
+		"url": "resources/images/cwg2.png",
+		"width": "250px",
+		"height": "100%",
+		"caption": ""
+	},{
+		"url": "resources/images/cwg3.png",
+		"width": "250px",
+		"height": "100%",
+		"caption": ""
+	}]
+}
